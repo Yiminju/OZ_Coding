@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="IE-edge" />
+    <title>설문조사 양식</title>
+  </head>
+  <body>
+    <header>
+      <h1>설문조사 양식</h1>
+      <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr />
+    <main>
+      <form>
+        <fieldset>
+          <legend>개인정보</legend>
+          <label for="name">이름</label>
+          <input
+            type="text"
+            placeholder="본명을 입력하세요"
+            id="name"
+            name="name"
+          />
+          <br />
+          <label for="email">이메일 주소</label>
+          <input
+            type="email"
+            placeholder="이메일 주소를 입력하세요"
+            id="email"
+            name="email"
+          />
+        </fieldset>
+        <fieldset>
+          <legend>설문</legend>
+          <p>연령대가 어떻게 되십니까?</p>
+          <input type="radio" id="teen" name="age" />
+          <label for="teen">10대</label>
+          <input type="radio" id="twenty" name="age" />
+          <label for="twenty">20대</label>
+          <input type="radio" id="thirty" name="age" />
+          <label for="thirty">30대</label>
+          <input type="radio" id="fourty" name="age" />
+          <label for="fourty">40대</label>
+          <input type="radio" id="fifty" name="age" />
+          <label for="fifty">50대</label>
+          <input type="radio" id="other" name="age" />
+          <label for="other">그 외</label>
+          <!-- radio버튼은 checkbox와 달리 보기 중 하나만 선택 가능. 
+            여러 개가 선택되는 경우는 입력 요소를 구분하지 않았기 때문. 하나의 식별자로 묶여야 함. 
+            위의 경우 name식별자로 묶임 -->
+          <p>
+            학원을 선택할때 가장 중요하게 생각하는 것은 무엇입니까? 모두
+            고르시오.
+          </p>
+          <input type="checkbox" id="location" name="academy" />
+          <label for="location">위치</label>
+          <input type="checkbox" id="price" name="academy" />
+          <label for="price">학원비</label>
+          <input type="checkbox" id="lteacher" name="academy" />
+          <label for="teacher">강사</label>
+          <input type="checkbox" id="test" name="lacademy" />
+          <label for="test">시험</label>
+          <p>학원을 다니시려는 이유가 무엇입니까? 모두 고르시오.</p>
+          <input type="checkbox" id="job" name="reason" />
+          <label for="job">취직</label>
+          <input type="checkbox" id="hobby" name="reason" />
+          <label for="hobby">취미</label>
+          <input type="checkbox" id="developement" name="reason" />
+          <label for="developement">자기개발</label>
+          <input type="checkbox" id="certificate" name="reason" />
+          <label for="certificate">자격증</label>
+        </fieldset>
+        <fieldset>
+          <legend>기타 의견</legend>
+          <textarea cols="30" rows="3" name="comment"></textarea>
+        </fieldset>
+        <input type="submit" />
+      </form>
+    </main>
+    <hr />
+    <footer>
+      <p>입력하느라 수고하셨습니다.</p>
+    </footer>
+  </body>
+</html>

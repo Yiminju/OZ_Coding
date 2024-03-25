@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여백 다루기</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+
+        margin: 10px 20px 30px 40px;
+
+        /* 
+        top bottom left right
+         */
+        padding-top: 20px;
+        padding-right: 50px;
+
+        /* 
+        기본값 : box-sizing: content-box;
+        border와 padding 값이 늘어남에 정해 놓은 너비와 높이 값 이상으로 늘어난다. => 요소가 정해진 값보다 커지게 된다.
+         */
+        box-sizing: border-box;
+        /*
+         border까지의 박스 사이즈를 정하는 것.
+         border와 padding 값이 정해 놓은 너비와 높이 값 내에서 늘어난다. 그에 따라 content 값이 border와 padding 값이 늘어난만큼 줄어든다.
+          */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

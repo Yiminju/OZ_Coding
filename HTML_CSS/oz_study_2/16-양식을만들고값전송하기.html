@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>양식 만들고 입력 정보 보내기</title>
+  </head>
+  <body>
+    <form action="server.com" method="post">
+      <label for="name">이름</label>
+      <!-- id는 웹페이지 내에서의 식별자라면 name은 서버로 전달된 입력값끼리의 식별자 -->
+      <!-- 서버가 정보를 받으면, name 속성으로 항목을 구분한다. 따라서 name의 역할은 무척 중요하다. -->
+      <input id="name" type="text" name="name" />
+      <br />
+      <label for="age">나이</label>
+      <input id="age" type="text" name="age" />
+      <br />
+      <label for="character">성격</label>
+      <textarea id="character" cols="10" rows="5" name="character"></textarea>
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

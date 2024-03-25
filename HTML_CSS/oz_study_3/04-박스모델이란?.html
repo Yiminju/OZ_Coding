@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 모델</title>
+    <style>
+      .area {
+        /*
+         % : 내가 속한 영역을 기준으로 백분율 계산
+         ==>내가 속한 영역에 관련 값이 있어야 적용 가능!
+        */
+        /*
+        body의 너비 값은 화면 크기로 값이 존재하지만,
+        body의 높이 값은 존재하지 않는다.
+        따라서 높이 값에 'height: 50%'을 입력해도 적용되지 않는다.
+        */
+        width: 50%;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>동요 - 곰 세마리</h2>
+    <p>곰 세마리가 한 집에 있어</p>
+    <p>아빠 곰, 엄마 곰, 애기 곰</p>
+    <p class="area">아빠 곰은 뚱뚱해 엄마 곰은 날씬해</p>
+  </body>
+</html>

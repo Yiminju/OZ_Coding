@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ㅏㅐ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경 다루기</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        border: 20px double green;
+
+        /* 
+        단축속성 background의 하위 속성들
+        -color : 요소의배경색상지정
+        -clip : 요소내배경의적용범위 
+        -image : 요소의배경이미지지정
+        -origin : 요소내배경의시작위치 
+        -size : 배경이미지의크기 
+        -position : 배경이미지의위치 
+        -repeat : 배경이미지의반복패턴  
+         */
+
+        /*background-color: yellowgreen;*/
+        background-clip: border-box;
+        background-image: url(image/cat.jpeg);
+        background-size: 300px 300px;
+        background-repeat: no-repeat;
+        background-origin: content-box;
+        /*background-position: 100px 50px;*/
+        background-position: center top;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
