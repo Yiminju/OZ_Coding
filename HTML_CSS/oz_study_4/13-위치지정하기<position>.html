@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치 지정하기 position</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        color: white;
+        background-color: orange;
+      }
+      /*
+        static; - 기본값
+        */
+      .relative {
+        /*
+        문서의 흐름에 맞춰 배치된 자리를 기준으로 요소를 이동시킨다.
+         */
+        background-color: rebeccapurple;
+        position: relative;
+        top: 50px;
+        left: 50px;
+      }
+      .absolute {
+        /*
+         absolute 요소는 지정된 상위 요소를 기준으로 요소를 이동시킨다. 단, 상위 요소 중에 position 속성을 가진 요소가 없다면 그냥 화면을 기준으로 이동한다. 이때 요소는 문서의 흐름에서 제외됨.
+         */
+        position: absolute;
+        top: 50px;
+        right: 50px;
+      }
+      .scroll {
+        height: 2000px;
+      }
+      .fixed {
+        /*
+        화면을 기준으로 요소이 위치를 고정한다.
+         */
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="absolute">1.</div>
+    <div class="relative">2.</div>
+    <div class="scroll">3.</div>
+    <div class="fixed">4.</div>
+  </body>
+</html>

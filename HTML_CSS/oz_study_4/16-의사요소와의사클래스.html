@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="IE-edge" />
+    <title>의사요소와 의사클래스</title>
+    <style>
+      .menu {
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      .menu > li {
+        display: inline-block;
+        text-align: center;
+      }
+      li > a {
+        display: inline-block;
+        width: 80px;
+        padding: 10px;
+        text-decoration: none;
+      }
+      /*
+      의사클래스(=가상클래스) ":"
+      hover: 마우스 포인터가 요소에 올라가 있다.
+      active: 사용자가 요소를 활성화 했다.
+      focus: 요소가 포커스르 받고 있다.
+      disabled: 비활성 상태의 요소이다.
+      nth-child(): 형제 사이에서의 순서에 따라 요소를 선택한다.
+       */
+      a:hover {
+        color: white;
+        background-color: gray;
+      }
+      a:active {
+        color: white;
+        background-color: black;
+      }
+      /*
+      nth-child():괄호 안에는 1,2,3과 같은 숫자 뿐만 아니라 n,2n,2n-1과 같은 기호?도 넣을 수 있다.
+      ex> n; 자연수, 2n; 2의 배수, 2n-1
+       */
+      li:nth-child(2n-1) {
+        font-size: 20px;
+      }
+      /*
+      의사요소 "::"
+      요소의 특정 부분에 대한 스타일을 정의
+      after: 요소의 뒤에 의사 요소를 생성 및 추가
+      before: 요소의 앞에 의사 요소를 생성 및 추가
+       */
+      a::first-letter {
+        color: red;
+      }
+      a::after {
+        content: "보기";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">사전</a></li>
+      <li><a href="#">뉴스</a></li>
+      <li><a href="#">증권</a></li>
+      <li><a href="#">지도</a></li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="IE-edge" />
+    <title>선택자 더 알아보기</title>
+    <style>
+      /*
+      속성 선택자: 특정 속성을 명시하여 속성 선택 '[속성명]'
+      하위 요소 선택자: 상위 요소에 포함된 하위 요소를 선택 '공백'
+      자식 요소 선택자: 하위 요소의 바로 한 단계 하위 요소를 선택 '>'
+      인접 형제 선택자: 형제 요소 중 첫 번째 형제 요소를 선택 '+'
+      형제 요소 선택자: 형제 요소를 선택 '~'
+       */
+      [width$="0"] {
+        border: 5px dotted red;
+      }
+      /*
+        기호와 함께 사용하는 속성 선택자
+        * : 값의 포함 여부
+        ^ : 값의 시작 여부
+        $ : 값의 끝 여부
+         */
+      body p em {
+        color: blue;
+      }
+      body > div {
+        color: aqua;
+      }
+      /*
+      형제 선택자 ~는 뒤이어 등장하는 형제들을 대상으로 한다.
+       */
+      #sam ~ p {
+        color: brown;
+      }
+      #sam + p {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/hobbang.jpeg" width="120" alt="호빵이" />
+    <img src="images/hobbang.jpeg" width="120" />
+    <img src="images/hobbang.jpeg" width="120" id="sam" />
+    <p>호빵이는 고양이이며, 현재 본인과 함께 거주하고 있다.</p>
+    <p>호빵이는 멋진 털을 가진 고양이입니다.</p>
+    <p>호빵이는 다양한 <em>개인기</em>를 가진 똑똑한 고양이입니다.</p>
+    <p>호빵이는 황태를 가장 좋아하며, 츄르를 두번째로 좋아합니다.</p>
+    <div>연습이다냥</div>
+  </body>
+</html>

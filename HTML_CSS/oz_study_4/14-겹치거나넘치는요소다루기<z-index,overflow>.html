@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>겹치거나 넘치는 요소 다루기 z-index, overflow</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+      /*
+      z-index는 position 지정 요소들끼의 z축에 쌓이는 순서를 정한다.
+      z-index는 값을 상대적으로 인식한다. 꼭 1,2,3...일 필요 없음
+       */
+      .div1 {
+        background-color: orange;
+        z-index: 44;
+        /* overflow의 기본형은 visible */
+        overflow: hidden;
+      }
+      .div2 {
+        background-color: red;
+        z-index: 32;
+        bottom: 50px;
+        overflow: scroll;
+      }
+      .div3 {
+        background-color: purple;
+        z-index: 21;
+        bottom: 100px;
+        /* overflow: auto; - 웹 브라우저의 설정 값을 따름
+        데스크톱 브라우저에서는 주로 scroll로 처리함 */
+        overflow: auto;
+      }
+      .div4 {
+        background-color: green;
+        z-index: 15;
+        bottom: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+    </div>
+    <div class="div2">
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+    </div>
+    <div class="div3">
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+      orangeorangeorangeorange orangeorangeorangeorange orangeorangeorangeorange
+    </div>
+    <div class="div4">4</div>
+  </body>
+</html>
