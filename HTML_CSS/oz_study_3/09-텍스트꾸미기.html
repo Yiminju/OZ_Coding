@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>텍스트 꾸미기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: Nanum Gothic Coding, Arial, monospace;
+      }
+      html {
+        font-size: 8px;
+      }
+      body {
+        font-size: 32px;
+      }
+      #first {
+        font-size: 3rem;
+        /* rem : 루트 요소<html>의 글자 크기를 배수로 계산해 적용하는 상대 단위
+           em : 부모 요소의 글자 크기를 배수로 계산해 적용하는 상대 단위 
+           px도 사용 가능 */
+        font-weight: 100;
+        line-height: 50px; /* 줄 간격이 넓어짐  */
+        text-align: justify; /* 양 끝 정렬 */
+      }
+    </style>
+  </head>
+  <body>
+    <p id="first">커피를 먹으면 심장이 뛰고 손이 떨려요.</p>
+    <p>커피를 먹으면 심장이 뛰고 손이 떨려요.</p>
+  </body>
+</html>
