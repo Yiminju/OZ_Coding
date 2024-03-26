@@ -16,7 +16,7 @@ body{
 
 /* 스크린 크기 조정 */
 .chat-screen{
-    /* calc(): CSS수치끼리 계산을 해서 그 결과를 속성값으로 쓴다. */
+    /* calc(): CSS 수치끼리 계산을 해서 그 결과를 속성값으로 쓴다. */
     height: calc(100% - 120px);
     overflow: scroll;
 }
@@ -29,7 +29,7 @@ body{
     height: 40px;
     font-size: 30px;
     border-radius: 5px;
-    padding-top:5px ;
+    padding-top:5px;
     background-color: white;
 }
 .chat-screen_up:active{
