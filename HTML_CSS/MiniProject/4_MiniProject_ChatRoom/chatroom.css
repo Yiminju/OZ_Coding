@@ -1,0 +1,110 @@
+/* 전체적인 세팅부터 */
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+.container{
+    height: 100%;
+    background-color: #256c9933;
+}
+
+/* 스크린 크기 조정 */
+.chat-screen{
+    /* calc(): CSS수치끼리 계산을 해서 그 결과를 속성값으로 쓴다. */
+    height: calc(100% - 120px);
+    overflow: scroll;
+}
+
+.chat-screen_up{
+    position: fixed;
+    right: 20px;
+    bottom: 140px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 5px;
+    padding-top:5px ;
+    background-color: white;
+}
+.chat-screen_up:active{
+    background-color: #6891dd;
+}
+
+/* 유저 정보 표시되는 부분 */
+.user_menu{
+    float: right;
+    position: relative;
+    top: 4px;
+    right: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+.user_menu:active{
+    background-color: #6891dd;
+}
+.user{
+    background-color: white;
+    padding: 16px;
+    height: 80px;
+}
+.user__column{
+    float: left;
+}
+.user_pic{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #256c9933;
+}
+.user_nick, .user_count{
+    margin: 5px;
+}
+.user_count{
+    font-size: 12px;
+    color: gray;
+}
+
+/* 채팅 입력 창 */
+.chat-form{
+    height: 120px;
+    background-color: white;
+}
+.chat-form_field{
+    height: 120px;
+}
+.chat-form_msg{
+    overflow: scroll;
+    float: left;
+    width: calc(100% - 120px);
+    height: 120px;
+    border: none;
+    resize: none;
+    font-size: 24px;
+    padding: 10px;
+}
+.chat-form_bt{
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #256c9933;
+    font-size: 18px;
+}
+
+.chat-form_msg:focus{
+    outline: none;
+}
+
+.chat-form_bt:active{
+    background-color: blue;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나만의 채팅방 만들기</title>
+    <link href="chatroom.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="chat-screen">
+        <section class="chat-screen_bar">
+          <button class="chat-screen_up">^</button>
+          <div class="user">
+            <button class="user_menu">≡</button>
+            <div class="user__column">
+              <div class="user_pic">
+                <img class="user_pic" src="images/hobbang.jpeg" />
+              </div>
+            </div>
+            <div class="user__column">
+              <p class="user_nick">호빵이</p>
+              <p class="user_count">502</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <form class="chat-form">
+        <section class="chat-form_field">
+          <textarea class="chat-form_msg">
+안녕! 오랜만이야. 너무 오랜만에 연락해서 미안해. 최근들어 너를 생각하면서도 소식 전하지 못해 아쉬웠어. 요즘은 정말 바쁘게 지내고 있어. 일상에 새로운 변화들이 많았는데, 그래도 너를 만나고 싶다는 생각은 항상 가지고 있었어. 네 소식도 궁금하고, 함께 시간 보낼 수 있는 건 언제나 기대돼. 나도 네가 최근에 경험한 이야기를 듣고 싶어. 만나서 소식 나누면서 오랜만에 좋은 시간 보내자!
+          </textarea>
+          <input type="submit" value="전송" class="chat-form_bt" />
+        </section>
+      </form>
+    </div>
+  </body>
+</html>
