@@ -13,11 +13,21 @@ body{
 h1{
     font-size: 48px;
 }
+h2{
+    color: #ff3377;
+}
 img{
-    width: 300px;
-    height: 300px;
-    border-radius: 150px;
+    width: 350px;
+    height: 350px;
+    border-radius: 175px;
+    border: 7px double #ff3377;
+    box-sizing: border-box;
 }
 p{
     font-size: 1.5rem;
+}
+#introduce p{
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 20px;
 }
