@@ -1,0 +1,108 @@
+.chat-screen_texts{
+    padding: 0;
+    list-style-type: none;
+}
+
+.chat-screen_texts > .text{
+    background-color: #ffffff;
+    width: 280px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 30px;
+    position: relative;
+    left: 20px;
+    overflow: visible;
+}
+
+/* id를 지정하면 적용이 되요 */
+#long{
+    height: 80px;
+}
+
+/*
+왜 적용이 안될까요??
+
+ul > li:nth-child(4){
+    height: 80px;
+}
+
+ul > li:nth-child(4){
+    transform: scale(0,30px);
+}
+
+ul > li:nth-child(5){
+    transform: scale(0,30px);
+}
+
+ul > li:nth-child(7){
+    transform: scale(0,30px);
+}
+
+ul > li:nth-child(10){
+    transform: scale(0,30px);
+}
+
+ul > li:nth-child(13){
+    transform: scale(0,30px);
+}
+*/
+
+/*
+왜 적용이 안될까요?
+.chat-screen_texts > .long{
+    height: 80px;
+}
+
+
+.chat-screen_texts > .long{
+    transform: scale(0,30px);
+}
+*/
+
+.chat-screen_texts > .text::after{
+    content: "";
+    border-right: 16px solid #ffffff;  
+    border-bottom: 16px solid transparent; 
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+
+.chat-screen_texts > .text_i{
+    background-color: #ffffff;
+    width: 280px;
+    height: 50px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 30px;
+    position: relative;
+    left: 394px;
+}
+
+.chat-screen_texts > .text_i::after{
+    content: "";
+    border-left: 16px solid #ffffff;  
+    border-top: 16px solid transparent; 
+    position: absolute;
+    top: 10px;
+    right: -10px;
+}
+
+.chat-screen_texts > .text:hover,
+.chat-screen_texts > .text_i:hover{
+    background-color: #6891dd;
+    transition: background-color 1.5s 0.1s ease-in;
+}
+
+.chat-screen_texts > .text:hover::after{
+    border-right: 16px solid #6891dd;
+    transition: border-right 1.5s 0.1s ease-in;
+}
+
+.chat-screen_texts > .text_i:hover::after{
+    border-left: 16px solid #6891dd;
+    transition: border-left 1.5s 0.1s ease-in;
+}
