@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애니메이션 효과</title>
+    <style>
+      .eyes {
+        width: 480px;
+        margin: auto;
+      }
+      .eye {
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        border-radius: 100px;
+        position: relative;
+      }
+      .eye:nth-child(1) {
+        float: left;
+      }
+      .eye:nth-child(2) {
+        float: right;
+      }
+      .ball {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 25px;
+        position: absolute;
+        top: 80px;
+        left: 30px;
+
+        /*
+        *animation 하위 속성
+        -direction: 동작 진행 방향
+        -iteration-count: 반복 횟수
+        -fill-mode: 전후 상태 설정
+        -play-state: 애니메이션 적용 여부
+         */
+        animation-name: moving;
+        animation-duration: 2s;
+        animation-delay: 0;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        /* animation: moving 2s 0 linear infinite alternate; */
+        /* 시간을 제외한 것들은 순서가 바뀌어도 정상 작동한다.
+        애니메이션 이름은 앞에 있어야한다. */
+      }
+      .ball:hover {
+        animation-play-state: paused;
+      }
+
+      /* 애니메이션을 표현하는 여러 개의 프레임은 @keyframes모듈을 이용해 정의
+      백분율을 이용해 나누거나, 별도의 키워드로 나눌 수 있음
+      
+      @keyframes 애니메이션 이름 {
+        from{ width: 100px; }
+        to{ width: 200px; }
+      }
+      @keyframes 애니메이션 이름 {
+        0%{ width: 100px; }
+        33%{ width: 133px; }
+        66%{ width: 166px; }
+        100%{ width: 200px; }
+      }
+      */
+      @keyframes moving {
+        from {
+          left: 30px;
+        }
+        to {
+          left: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+</html>

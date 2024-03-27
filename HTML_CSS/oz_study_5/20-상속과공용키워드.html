@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상속과 공용키워드</title>
+    <style>
+      /*
+        *공용 키워드(=전역 키워드)
+        스타일 속성마다 상속 가능 여부가 기본적으로 설정되어 있지만, CSS에서는 스타일 속성의 상속 여부를 제어할 수 있는 3개의 키워드를 별도로 지원 
+        모든 속성에 적용 가능
+        
+        inherit: 상위 요소로부터 해당 속성의 값을 받아 사용
+        initial: (브라우저에 지정되어 있는) 해당 속성의 기본값을 요소에 적용
+        unset: 상속되는 속성에 대해서는 inherit처럼, 상속되지 않는 속성에 대해서는 initial처럼 적용
+         */
+      .list {
+        /* 상속 되는 애 */
+        color: brown;
+        font-style: italic;
+        font-weight: 900px;
+
+        /* 상속 안 되는 애 */
+        border: 3px dotted green;
+        padding: 0;
+      }
+
+      ul {
+        border: inherit;
+      }
+      li:nth-child(3) {
+        color: unset;
+        font-style: initial;
+        font-weight: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>마라톤 대회 참가 기록</h2>
+    <div class="list">
+      <ul>
+        <li>새해맞이 대전 마라톤 대회</li>
+        <li>서울 국제 마라톤 대회</li>
+        <li>대전 대청호 벚꽃길 마라톤 대회</li>
+        <li>대전 3대하천 마라톤 대회</li>
+      </ul>
+    </div>
+  </body>
+</html>

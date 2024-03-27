@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     ==> 너비는 기기 화면 너비에 맞추고 배율은 1로 한다 
+     -->
+    <title>반응형 웹과 뷰포트 단위</title>
+    <style>
+      /*
+        *화면 크기에 반응하는 단위
+        vw: 뷰포트 너비의 100분의 1
+        vh: 뷰포트 높이의 100분의 1
+        vmin: 뷰포트 너비와 높이 중 작은 쪽의 100분의 1
+        vmax: 뷰포트 너비와 높이 중 큰 쪽의 100분의 1
+
+        작업이 까다로워질 위험도 있으므로 꼭 필요할 때만 적절히 사용하자!
+        */
+      p {
+        margin: 0;
+        font-size: 10vw;
+      }
+    </style>
+  </head>
+  <body>
+    <p>데미안 - 헤르만 헤세</p>
+  </body>
+</html>
