@@ -16,50 +16,25 @@
     overflow: visible;
 }
 
-/* id를 지정하면 적용이 되요 */
-#long{
-    height: 80px;
-}
-
 /*
-왜 적용이 안될까요??
-
-ul > li:nth-child(4){
-    height: 80px;
-}
-
-ul > li:nth-child(4){
-    transform: scale(0,30px);
-}
-
-ul > li:nth-child(5){
-    transform: scale(0,30px);
-}
-
-ul > li:nth-child(7){
-    transform: scale(0,30px);
-}
-
-ul > li:nth-child(10){
-    transform: scale(0,30px);
-}
-
-ul > li:nth-child(13){
-    transform: scale(0,30px);
-}
-*/
-
-/*
-왜 적용이 안될까요?
 .chat-screen_texts > .long{
     height: 80px;
 }
+=> 적용 안 됨
+나중에 쓰인 .chat-screen_texts > .text_i 의 height: 50px 이 적용됨
 
-
-.chat-screen_texts > .long{
-    transform: scale(0,30px);
+하지만
+.chat-screen_texts > li.long{
+    height: 80px;
 }
-*/
+=> 적용됨
+CSS 선택자의 우선순위는 '선택자를 얼마나 구체적으로 적었는가'에 따라서도 달라질 수 있음
+따라서 .chat-screen_texts > li.long 를 사용한다면,
+클래서 선택자 2개 + 요소 선택자(li) 1개 + 자식 선택자를 묶어서 사용한 것이 되기 때문에, 
+.chat-screen_texts > .text_i 와 같이 2개의 클래스 선택자 + 1개의 자식 선택자가 결합된 선언문보다 더 높은 우선순위를 갖게 됨!
+ */
+
+
 
 .chat-screen_texts > .text::after{
     content: "";
@@ -80,6 +55,19 @@ ul > li:nth-child(13){
     line-height: 30px;
     position: relative;
     left: 394px;
+}
+
+/*
+.chat-screen_texts > .long{
+    height: 80px;
+}
+=> 적용됨
+.chat-screen_texts > .text_i 와 같이 2개의 클래스 선택자 + 1개의 자식 선택자가 결합된 선언문과 마찬가지로 2개의 클래스 선택자와 + 1개의 자식 선택자가 결홥된 선언문이지만,
+.chat-screen_texts > .text_i 보다 나중에 쓰였기 때문에 적용이 된다.
+ */
+
+ .chat-screen_texts > .long{
+    height: 80px;
 }
 
 .chat-screen_texts > .text_i::after{
