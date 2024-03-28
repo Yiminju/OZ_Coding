@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플랙스 실습</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      ul {
+        display: flex;
+        padding: 0;
+        list-style: none;
+        height: 200px;
+
+        align-items: center;
+      }
+      li {
+        background-color: tomato;
+      }
+      li:nth-child(2n) {
+        background-color: teal;
+      }
+      li:nth-child(2) {
+        /*flex-grow: 1;*/
+        /*flex-shrink: 2;*/
+      }
+      li:nth-child(4) {
+        /*flex-grow: 1;*/
+        /*flex-shrink: 3;*/
+      }
+      li:nth-child(2n-1) {
+        /*flex-basis: 100px;
+        flex-grow: 1;*/
+        flex: 1 1 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>내가 좋아하는 음식들</h1>
+    <ul>
+      <!--
+            flex item은 flex container 안에 들어있는 요소일뿐이다.
+            flex item은 flex container의 역할은 하지 않는다!
+        -->
+      <li>김치등갈비찜</li>
+      <li>잔치국수</li>
+      <li>초밥</li>
+      <li>마라탕</li>
+      <li>닭볶음탕</li>
+    </ul>
+  </body>
+</html>
