@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수와 상수</title>
+  </head>
+  <body>
+    <!--
+        let 변수이름 = 데이터;
+        변수가 생성되고 나면, 변수(이름)을 지정된 데이터 대신 사용할 수 있다.
+
+        변수 선언: 변수를 만드는 작업
+        => let 변수이름;
+
+        변수의 초기화: 만들어진 변수에 첫 데이터 저장
+        => 변수이름 = 데이터;
+
+        *변수의 이름을 지을 때의 제약사항
+        -변수명에는 오직 문자, 숫자, 기호'$', '_'만 포함 가능
+        -변수명의 첫 번쩨 글자로 숫자가 올 수 없다.
+        -이미 다른 뜻을 가지고 있는 단어(키워드)는 변수명으로 사용할 수 없다.
+    -->
+    <!--
+        변수는 한번에 하나의 데이터만 기억할 수 있으며, 기억하고 있는 값을 바꿔가며 사용 가능하다.
+
+        let 변수이름 = 데이터1; => 변수 선언과 초기화 동시 진행
+        변수이름 = 데이터2; => 새로운 데이터 대입
+        변수이름 = 데이터3; => 새로운 데이터 또 대입
+    -->
+
+    <!--
+        const 상수이름 = 데이터;
+
+        상수: 변하지 않는 값
+        상수를 만들 때는 선언과 동시에 초기화를 해줘야 한다.
+        그렇지 않으면 데이터를 지정할 수 없다.
+        상수 선언 이후 데이터를 대입하려고 하면 에러 발생!
+
+    -->
+    <script>
+      let num = 5;
+      console.log(num);
+      console.log(num);
+      console.log(num);
+
+      let number;
+      number = 10;
+      console.log(number);
+
+      number = 20;
+      console.log(number);
+
+      number += 1;
+      console.log(number);
+
+      number *= 2;
+      console.log(number);
+
+      const age = 20;
+      window.alert(age);
+    </script>
+  </body>
+</html>

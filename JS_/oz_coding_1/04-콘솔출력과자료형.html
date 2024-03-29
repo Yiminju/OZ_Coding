@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콘솔출력과 자료형</title>
+  </head>
+  <body>
+    <!--
+    콘솔(console): 브라우저의 디버깅 콘솔
+    콘솔은 브라우저 안에 내장된 브라우저의 하위 객체이므로,
+    브라우저 객체를 통해 접근 가능
+    window.console
+
+    디버깅 콘솔을 이용하면 자바스크립트 코드를 테스트(점검)할 수 있다.
+     -->
+    <!--
+        웹브라우저에 접근할 수 있게 해주는 객체 window는 console을 비롯한 다양하나 하위 객체 및 데이터, 메소드를 포함하고 있는데, 사용자는 편의를 위해 window.를 생략할 수 있다.
+
+        window.console = console
+     -->
+
+    <!--
+        console.log(x) 명령문은 '콘솔 창에 x라고 써 줘'라는 명령 전달
+        x자리에는 사용자가 원하는 내용을 입력하면 되는데, 자바스크립트 문법으로 표현될 수 있는 데이터만이 x자리에 들어갈 수 있다.
+
+        자료형: 자바스크립트에서 데이터를 표현할 때 사용하는 형식
+              
+        주요 자료형에는 
+        숫자, 문자열, 불리언, (다양한 목적과 형태의) 객체 
+        같은 것들이 있다.
+      -->
+
+    <script>
+      //정수 기록하기
+      window.console.log(10);
+      window.console.log(0);
+      window.console.log(-10);
+      //실수 기록하기
+      console.log(10.34);
+      console.log(-10.34);
+      //산술 연산
+      //반환: 명령문이 결과값처럼 사용되는 것
+      console.log(10 + 3);
+      console.log(10 - 3);
+      console.log(10 * 3);
+      console.log(10 / 3);
+      console.log(10 % 3);
+      console.log(10 + 3 * 2);
+
+      //데이터의 자료형이 알고 싶은 경우, (typeof 데이터) 입력!
+      console.log(typeof 3);
+    </script>
+  </body>
+</html>
