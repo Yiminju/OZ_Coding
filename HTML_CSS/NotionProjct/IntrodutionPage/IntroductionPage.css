@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color: #d0daa9;
+}
+.introdution_page{
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    border: 5px solid #98a955;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 415px;
+    height: 215px;
+    background-color: #ffffff;
+    border: 5px double #98a955;
+}
+p{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px;
+}
+.nav{
+    font-weight: 700;
+    font-size: 23px;
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+li{
+    padding: 5px 0;
+}
+.btn{
+    height: 25px;
+    background-color: #98a955;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+.complain_title{
+    font-weight: 700;
+    font-size: 23px;
+    border: 5px solid #98a955;
+    width: 200px;
+    background-color: #d0daa9;
+    text-align: center;
+}
+
+.side_bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 280px;
+    height: 215px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 5px double #98a955;
+}
+
+.complain_btn{
+    height: 25px;
+    background-color: #98a955;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 100px;
+}

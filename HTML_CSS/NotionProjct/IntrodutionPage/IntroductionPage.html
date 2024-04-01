@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="IntroductionPage.css" rel="stylesheet" />
+    <title>소개 페이지 만들기</title>
+  </head>
+  <body>
+    <h1>오늘의 급식</h1>
+    <div class="introdution_page flex">
+      <section class="info_container flex">
+        <div class="info">
+          <p>맛있는 영양만점 점심 메뉴</p>
+          <p>편식하지 않고 골고루 맛있게 먹읍시다!</p>
+          <ul class="nav">
+            <li>
+              이번 달 급식 전체 보기<input
+                type="button"
+                value="바로가기"
+                class="btn"
+              />
+            </li>
+
+            <li>
+              영양 성분 체크하기<input
+                type="button"
+                value="바로가기"
+                class="btn"
+              />
+            </li>
+
+            <li>
+              점심 메뉴 건의하기<input
+                type="button"
+                value="바로가기"
+                class="btn"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="side_bar_container flex">
+        <div class="side_bar">
+          <p class="complain_title">불편 사항 접수</p>
+          <ul>
+            <li class="food">음식에 대한 불편 사항</li>
+            <li class="cafeteria">급식실 환경에 대한 불편 사항</li>
+            <li class="other">기타 불편 사항</li>
+          </ul>
+          <input type="button" value="불편 사항 접수" class="complain_btn" />
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
