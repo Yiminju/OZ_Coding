@@ -16,7 +16,8 @@
     <h1 id="name"></h1>
     <p id="hobby"></p>
     <p id="song"></p>
-    <hr />
+    <p id="animal"></p>
+    <p id="fruit"></p>
 
     <script>
       const nameElement = document.querySelector("#name");
@@ -35,8 +36,20 @@
 
       document.querySelector(
         "#song"
-      ).textContent = `내가 좋아하는 노래는 ${prompt(
+      ).textContent = `제가 좋아하는 노래는 ${prompt(
         "당신이 좋아하는 노래는?"
+      )}입니다.`;
+
+      document.querySelector(
+        "#animal"
+      ).textContent = `제가 좋아하는 동물은 ${prompt(
+        "당신이 좋아하는 동물은?"
+      )}입니다.`;
+
+      document.querySelector(
+        "#fruit"
+      ).textContent = `제가 좋아하는 과일은 ${prompt(
+        "당신이 좋아하는 과일은?"
       )}입니다.`;
     </script>
   </body>
