@@ -11,8 +11,13 @@ body{
     background-color: #d0daa9;
 }
 .introdution_page{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.info_container{
+    flex-grow: 1;
 }
 h1{
     border: 5px solid #98a955;
@@ -28,6 +33,7 @@ h1{
     height: 215px;
     background-color: #ffffff;
     border: 5px double #98a955;
+    width: 100%;
 }
 p{
     font-size: 20px;
@@ -61,6 +67,9 @@ li{
     text-align: center;
 }
 
+.side_bar_container{
+    flex-grow: 1;
+}
 .side_bar{
     display: flex;
     flex-direction: column;
