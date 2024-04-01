@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열 & window.prompt()</title>
+  </head>
+  <body>
+    <script>
+      let apple;
+      apple = "사과";
+      let banana = "바나나";
+      console.log(apple);
+      console.log("사과");
+      console.log(apple + "&" + banana);
+
+      /*
+      prompt(x) 메소드는 실행 시에 사용자로부터 문자열을 입력받고, 입력받은 문자열을 자신이 사용되니 곳에 그대로 '반환'한다. 즉, 메소드가 문자열로 바뀌게 된다.
+      실제로 코드가 바뀌는 게 아닌 마치 바뀐 것처럼 실행된다는 의미! 
+       */
+      let answer = prompt("당신이 좋아하는 과일은?");
+      alert(answer);
+    </script>
+  </body>
+</html>

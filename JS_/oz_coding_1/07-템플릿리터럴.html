@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>템플릿 리터럴</title>
+  </head>
+  <body>
+    문자열 포멧팅
+
+    <script>
+      /*
+    따옴표를 이용한 기존의 문자열
+    const str1 = '작은 따옴표'
+    const str2 = "큰 따옴표"
+
+    백틱을 이용한 템플릿 리터럴
+    const str3 = `백틱`
+
+    템플릿 리터럴: 반환값이 존재하는 자바스크립트 코드, 즉 표현식을 내장할 수 있는 문자열 표현법
+
+    템플릿 리터럴로 표현한 문자열 내부에 플레이스홀더(${})를 기입하고, 그 안에 데이터를 기입하면 데이터는 문자열의 멤버가 된다.
+
+    const data1 = "데이터"
+    const str1 = `문자열 중간에 ${data1} 삽입하기`
+    console.log(str1)
+    */
+      const dog = "강아지";
+      const cat = `고양이`;
+      console.log(typeof cat);
+
+      const modifier = "귀여운";
+      const prettydog = `${modifier} ${dog} 좋아요!`;
+      console.log(prettydog);
+
+      const prettyPet = `${modifier} ${prompt("좋아하는 동물은?")}!`;
+      console.log(prettyPet);
+    </script>
+  </body>
+</html>
