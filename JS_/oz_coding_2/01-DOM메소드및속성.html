@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 메소드 및 속성</title>
+  </head>
+  <body>
+    <h1 id="song-title" class="heading text" title="애국가">
+      <span>애국가 1절</span>
+    </h1>
+    <p class="lyrics">동해물과 백두산이 마르고 닳다록</p>
+    <p class="lyrics">하나님이 보우하사 우리 나라 만세</p>
+    <script>
+      console.log(document.querySelectorAll(".lyrics"));
+      console.log(document.getElementsByClassName("lyrics"));
+      const title = document.getElementById("song-title");
+      console.log(title);
+
+      console.log(title.textContent);
+      //textContent은 innerText와 다르게 코드 상의 공백을 포함한다.
+      console.log(title.innerText);
+      //innerText는 텍스트만
+      console.log(title.className);
+      //클래스 이름
+      console.log(title.style);
+      //적용된 스타일
+      console.log(title.title);
+      //타이틀 속성값
+    </script>
+  </body>
+</html>
