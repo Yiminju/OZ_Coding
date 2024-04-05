@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createElement & appendChild</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      /*
+      document.createElement(): 지정된 이름의 html요소를 만들어 반환
+      html요소가 만들어지고 또 반환되었다고 해서, 해당 요소가 곧장 웹 브라우저 화면에 추가되지 않음 => 자바스크립트 단계에서 만들어져 있는 요소를 화면에 표시하는 작업을 추가로 해야함
+
+      appendChild(): DOM 내 개별요소('노드'라고도 함)에 자식 요소를 추가
+
+      append 메소드는 appendChild 메소드와 타겟 요소에 자식 요소를 추가한다는 점에서 같으나, 차이점 존재
+      append(): 요소에 노드 객체 또는 문자열을 자식 요소로 추가할 수 있음
+      / 반환 데이터가 없음(undefined)
+      appendChild(): 요소에 노드 객체만 자식 요소로 추가할 수 있음
+      / 추가한 자식 노드를 반환
+      */
+      const div = document.getElementById("container");
+
+      const box = document.createElement("div");
+      box.style.color = "red";
+      box.style.width = "200px";
+      box.style.height = "200px";
+      box.textContent = "헷갈리지만 재밌어";
+      div.appendChild(box);
+
+      //for문으로 box 5개 만들기
+      for (a = 1; a <= 5; a++) {
+        const box = document.createElement("div");
+        box.style.color = "red";
+        box.style.width = "200px";
+        box.style.height = "200px";
+        box.textContent = "헷갈리지만 재밌어";
+        div.appendChild(box);
+      }
+    </script>
+  </body>
+</html>

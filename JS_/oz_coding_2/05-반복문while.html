@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 while</title>
+  </head>
+  <body>
+    <script>
+      //while문: 주어진 조건이 '참'일 동안에 구문을 반복하는 반목문
+      //조건이란 불리언을 반환하거나 불리언으로 해석될 수 있는 표현식!
+      //반복 구문은 '루프(loop)' 라고도 한다.
+
+      while (confirm("반복 실행할까요?")) {}
+
+      /*
+        for (let i = 0; i < 5; i += 1) {
+        document.write(`반복중...이다!${i + 1}번째!<br />`);
+      }
+      */
+      let i = 0;
+      while (i < 5) {
+        document.write(`반복중이다! ${i + 1}번쩨!<br/>`);
+        i += 1; // 변수에 대한 변화도 꼭 써주기!
+      }
+    </script>
+  </body>
+</html>
