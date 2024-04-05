@@ -23,7 +23,7 @@
       if (attackDamage > 0) {
         while (monsterHP > 0) {
           monsterHP -= attackDamage; //HP 감소
-          attackCount += 1;
+          attackCount += 1; //때리는 수는 증가
 
           const p = document.createElement("p");
           p.textContent = `몬스터를 ${attackCount}회 공격했습니다!`;
@@ -32,6 +32,8 @@
           const strong = document.createElement("strong");
           strong.textContent = `몬스터의 남은 HP는 ${monsterHP}입니다.`;
           container.appendChild(strong);
+
+          //만약에 HP가 0보다 작아질 경우, HP에 0을 대입한다!
         }
 
         const h2 = document.createElement("h2");
