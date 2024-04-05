@@ -34,6 +34,9 @@
           container.appendChild(strong);
 
           //만약에 HP가 0보다 작아질 경우, HP에 0을 대입한다!
+          if (monsterHP < 0) {
+            strong.textContent = "몬스터의 남은 HP는 0입니다.";
+          }
         }
 
         const h2 = document.createElement("h2");
