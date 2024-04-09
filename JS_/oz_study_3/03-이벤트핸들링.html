@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 & 이벤트 핸들링</title>
+  </head>
+  <body>
+    <button id="span">SPAN</button>
+    <button id="strong">STRONG</button>
+    <button id="mark">MARK</button>
+    <hr />
+    <script>
+      const spanBtn = document.getElementById("span");
+      const strongBtn = document.getElementById("strong");
+      const markBtn = document.getElementById("mark");
+
+      /*
+      각각의 이벤트에 대한 이벤트 핸들러를 정의할 수 있다.
+      이벤트 핸들러: 이벤트가 발생되면 실행될 코드 블록, 주로 함수가 이 역할을 담당
+      */
+
+      //   function handleClick() {
+      //     alert("클릭했어요!");
+      //   }
+      //   spanBtn.onclick = handleClick;
+      //이벤트 핸들러를 등록하기 위해 이벤트 속성에 함수를 대입하는 것과 함수 호출문을 대입하는 것은 엄연히 다르다!
+
+      //   spanBtn.onclick = function () {
+      //     const span = document.createElement("span");
+      //     span.textContent = "새로 생긴 span 태그입니다.";
+      //     document.body.appendChild(span);
+      //   };
+
+      /*
+      onclick, onkeydown과 같은 이벤트 속성을 통해 이벤트 핸들러를 등록하는 것보다 편하고 유용한 이벤트 처리 방법은 addEventListener 메소드를 사용하는 것이다.
+
+      addEventListener 메소드의 장점
+      - 이전에 추가한 이벤트 핸들러를 제거할 수 잇는 대응 메소드가 존재(removeEventListener)
+      - 같은 리스너(타겟)에 대해 다수의 핸들러를 등록할 수 있다.
+      */
+      //   spanBtn.addEventListener("click", function () {
+      //     const span = document.createElement("span");
+      //     span.textContent = "새로 생긴 span 태그입니다.";
+      //     document.body.appendChild(span);
+      //   });
+
+      /*
+      이벤트 객체: 추가적인 기능과 정보를 제공하기 위해서 이벤트 핸들러에 자동으로 전달되는 데이터
+      
+      이를 활용하기 위해서는 이벤트 핸들러 함수에 매개변수를 추가하여 이벤트 발생 시마다 전달받을 수 있도록 해야 한다.
+      */
+      const handleClick = function (event) {
+        if (event.target.id === "span") {
+          const span = document.createElement("span");
+          span.textContent = "새로 생긴 span 태그입니다.";
+          document.body.appendChild(span);
+        }
+        if (event.target.id === "strong") {
+          const strong = document.createElement("strong");
+          strong.textContent = "새로 생긴 strong 태그입니다.";
+          document.body.appendChild(strong);
+        }
+        if (event.target.id === "mark") {
+          const mark = document.createElement("mark");
+          mark.textContent = "새로 생긴 mark 태그입니다.";
+          document.body.appendChild(mark);
+        }
+      };
+
+      spanBtn.addEventListener("click", handleClick);
+      strongBtn.addEventListener("click", handleClick);
+      markBtn.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

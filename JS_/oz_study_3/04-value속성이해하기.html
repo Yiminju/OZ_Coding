@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>value속성 이해하기</title>
+  </head>
+  <body>
+    <input id="talk" />
+    <input id="push" type="button" value="push" />
+
+    <form id="form">
+      <input name="name" />
+      <input name="nick" />
+      <input type="submit" />
+    </form>
+
+    <script>
+      /*
+      <input>,<select>처럼 사용자로부터 입력을 받는 요소에서 사용자가 입력한 값을 읽어들일 때는, 요소의 value속성에 접근하자.
+
+        요소에 쓰여져 있는 텍스트에 접근하고 싶다 => textCentent
+        사용자가 직접 요소에 입력한 값에 접근하고 싶다 => value
+      */
+      /*
+      const input = document.getElementById("talk");
+      const button = document.getElementById("push");
+
+      input.addEventListener("keyup", function (event) {
+        console.log(event.target.value);
+      });
+
+      button.addEventListener("click", function () {
+        const p = document.createElement("p");
+        p.textContent = input.value;
+        document.body.append(p);
+      });
+      */
+      const form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        //제출이 발생했을 때, 기본적으로 새로고침이 되는데, 그것을 하지 않고자 함.
+        const p = document.createElement("p");
+        p.textContent = `${event.target.name.value}의 별명은 ${event.target.nick.value}`;
+        document.body.append(p);
+      });
+    </script>
+  </body>
+</html>
