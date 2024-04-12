@@ -35,7 +35,7 @@ form.addEventListener("submit", function(event){
     document.body.innerHTML = ""
     //코드를 추가하는 메소드 : write()
     document.write(
-        `<p>${userId}님 환영합니다!</p>
+        `<p>${userId}님 환영합니다!
         <br>
         회원 가입 시 입력하신 내역은 다음과 같습니다.
         <br>
@@ -45,6 +45,6 @@ form.addEventListener("submit", function(event){
         <br>
         전화번호 : ${userphone}
         <br>
-        원하는 직무 : ${userPosition}`
+        원하는 직무 : ${userPosition}</p>`
     )
 })
