@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체를 만드는 생성자</title>
+  </head>
+  <body>
+    <script>
+      //생성자 : 함수인데, 객체를 생성할 목적으로 정의하는 함수, 설계도 개념.
+      //자바스크립트에서 기본으로 제공하지 않는 데이터 유형을 직접 만들 수 있다.
+
+      //생성자 함수 정의 시 this키워드는 그 자신을 의미. this를 이용해 해당 객체의 속성이나 메소드 추가
+
+      //생성자 함수명의 첫글자는 "대문자"(필수가 아닌 관례)
+
+      function BestSinger() {
+        this.name = "BTS";
+        this.member = "V, J-Hope, RM, 지민, 정국, 진, 슈가";
+        this.singing = function () {
+          console.log("love yourself");
+        };
+      }
+
+      /*생성자 함수는 '객체를 이렇게 만들겠습니다'에 대한 정의일 뿐이며, 
+      실제 객체가 생성되기 위해서는 new연산을 통해 객체를 반환해야 한다.
+      */
+      const bts = new BestSinger();
+      bts.singing();
+      console.log(bts.name);
+      console.log(bts.member);
+
+      function Singer(name, member) {
+        this.name = name;
+        this.member = member;
+      }
+
+      const noel = new Singer("노을", "강균성, 전우성, 이상곤, 나성호");
+
+      console.log(noel.name);
+      console.log(noel.member);
+    </script>
+  </body>
+</html>

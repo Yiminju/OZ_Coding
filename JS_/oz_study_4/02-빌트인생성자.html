@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>빌트인 생성자</title>
+  </head>
+  <body>
+    <p id="now"></p>
+
+    <script>
+      /*자바스크립트는 개발자의 편의를 위해 유용한 기능을 제공하는 빌틍인 생성자 또는 빌트인 객체를 지원한다.
+
+        빌트인 생성자 : 자바스크립트에 내장된 생성자. 이를 이용해 객체 생성 ex) Date
+
+        빕트인 객체 : 자바스크립트에 내장된 객채. 이를 이용해 값이나 기능 호출
+        */
+
+      const p = document.getElementById("now");
+
+      const now = new Date();
+      //const then = new Date(2002, 1, 5, 12, 30, 45);
+      console.log(now);
+      //console.log(then);
+
+      let year = now.getFullYear();
+      //'월'의 경우, 0부터 시작. 따라서 1월은 0으로 표시. 12월은 11.
+      let month = now.getMonth() + 1;
+      let day = now.getDate();
+      let hour = now.getHours();
+      let min = now.getMinutes();
+      let sec = now.getSeconds();
+
+      p.textContent = `${year}/${month}/${day} ${hour}:${min}:${sec}`;
+    </script>
+  </body>
+</html>
