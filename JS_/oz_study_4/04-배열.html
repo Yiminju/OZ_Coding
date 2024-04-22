@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      const bigbang = ["지디", "태양", "대성"];
+      console.log(bigbang);
+      console.log(bigbang[0]);
+      console.log(bigbang[1]);
+      console.log(bigbang[2]);
+
+      bigbang[0] = "권지용";
+      bigbang[1] = "김영배";
+      bigbang[2] = "김대성";
+      console.log(bigbang);
+
+      for (let i = 0; i < 3; i++) {
+        console.log(bigbang[i]);
+      }
+
+      //push : 배열에 주어진 요소 추가하기
+      bigbang.push("탑");
+      console.log(bigbang);
+
+      //pop : 배열에 끝부분부터 요소 제거하기
+      bigbang.pop("탑");
+      console.log(bigbang);
+
+      //indexOf : 주어진 요소의 유무를 인데스 번호로 확인, 요소가 없을 경우 -1
+      console.log(bigbang.indexOf("김영배"));
+      console.log(bigbang.indexOf("탑"));
+
+      //splice : 정해진 위치에서부터 정해진 개수만큼 요소 제거
+      //bigbang.splice(1, 1);
+      //console.log(bigbang);
+
+      //splice로 요소를 지운 다음, 대체 값을 채우는 것도 가능하다!
+      bigbang.splice(0, 3, "지디", "태양", "대성");
+      console.log(bigbang);
+
+      //forEach : 배열의 개별 요소에 대한 함수를 차례대로 호출
+      bigbang.forEach(function (item) {
+        console.log("forEach에서 호출된 함수!" + item);
+      });
+    </script>
+  </body>
+</html>

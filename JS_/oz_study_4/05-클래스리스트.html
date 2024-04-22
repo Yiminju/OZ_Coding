@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html 클래스 적극 활용하기 - Element.classList</title>
+    <style>
+      .cute {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="image/cat.jpeg" alt="귀여운 고양이 호빵이" />
+    <br />
+    <button id="add">ADD STYLE</button>
+    <button id="remove">REMOVE STYLE</button>
+    <button id="toggle">TOGGLE STYLE</button>
+
+    <script>
+      const img = document.querySelector("img");
+      const addBtn = document.querySelector("#add");
+      const removeBtn = document.querySelector("#remove");
+      const toggleBtn = document.querySelector("#toggle");
+
+      console.log(img.classList);
+
+      addBtn.addEventListener("click", function () {
+        img.classList.add("cute");
+        console.log(img.classList.contains("cute"));
+      });
+      removeBtn.addEventListener("click", function () {
+        img.classList.remove("cute");
+        console.log(img.classList.contains("cute"));
+      });
+      toggleBtn.addEventListener("click", function () {
+        //toggle : 있으면 제거하고, 없으면 추가해라!
+        img.classList.toggle("cute");
+        console.log(img.classList.contains("cute"));
+      });
+    </script>
+  </body>
+</html>
